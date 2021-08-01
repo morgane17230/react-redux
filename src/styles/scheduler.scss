@@ -1,0 +1,36 @@
+@use 'reset';
+@use 'vars';
+@use 'index';
+
+.scheduler {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    flex-direction: column;
+    width: 80%;
+    border: 1px solid black;
+    height: fit-content;
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid black;
+        padding: 1rem 0;
+        button {
+            background-color: transparent;
+            border: none;
+        }
+    }
+    &-content {
+        display: flex;
+        &-header {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-item {
+            width: calc(100% / 8);
+            height: calc(95vh / 23);
+        }
+    }
+}
